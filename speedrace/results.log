@@ -1,0 +1,49 @@
+=== sieve 600 ===
+c sieve 600 result=398747400 time=29.821s
+rust sieve 600 result=398747400 time=32.817s
+go sieve 600 result=398747400 time=30.406s
+java sieve 600 result=398747400 time=37.948s
+node sieve 600 result=398747400 time=40.200s
+bun sieve 600 result=398747400 time=48.488s
+pypy sieve 600 result=398747400 time=78.533s
+luajit sieve 600 result=398747400 time=177.319s
+=== bit 28 ===
+c bit 28 result=367944 time=1.423s
+rust bit 28 result=367944 time=2.149s
+go bit 28 result=367944 time=29.289s
+java bit 28 result=367944 time=21.588s
+node bit 28 result=367944 time=31.731s
+bun bit 28 result=367944 time=24.640s
+pypy bit 28 result=367944 time=47.977s
+luajit bit 28 result=367944 time=44.103s
+=== eq 3000 ===
+c eq 3000 result=480 time=5.123s
+rust eq 3000 result=480 time=51.029s
+go eq 3000 result=480 time=29.714s
+java eq 3000 result=480 time=37.264s
+node eq 3000 result=480 time=30.108s
+bun eq 3000 result=480 time=27.987s
+pypy eq 3000 result=480 time=32.643s
+luajit eq 3000 result=480 time=20.286s
+julia sieve 600 result=398747400 time=31.322s
+julia bit 28 result=367944 time=24.056s
+julia eq 3000 result=480 time=6.175s
+=== rust (..= を 0..n + 1 に修正後) ===
+rust sieve 600 result=398747400 time=31.567s
+rust bit 28 result=367944 time=1.970s
+rust eq 3000 result=480 time=6.607s
+=== mat 1750 ===
+c mat 1750 result=57421875000 time=17.572s
+rust mat 1750 result=57421875000 time=16.455s
+go mat 1750 result=57421875000 time=29.742s
+java mat 1750 result=57421875000 time=50.695s
+node mat 1750 result=57421875000 time=35.458s
+bun mat 1750 result=57421875000 time=76.159s
+pypy mat 1750 result=57421875000 time=69.234s
+luajit mat 1750 result=57421875000 time=33.113s
+julia mat 1750 result=57421875000 time=8.655s
+=== 参考: ライブラリ(1スレッド) ===
+numpy(BLAS) mat 1750 result=57421875000 time=0.171s
+julia(BLAS A*B) mat 1750 result=57421875000 time=0.177s
+=== 参考: C を列優先の並びにした場合 ===
+c(列優先) mat 1750 result=57421875000 time=8.248s
