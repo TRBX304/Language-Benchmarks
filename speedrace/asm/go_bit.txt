@@ -1,0 +1,89 @@
+TEXT main.bit(SB) /home/claude/speedrace/bench.go
+  bench.go:28		0x494e60		493b6610		CMPQ SP, 0x10(R14)			
+  bench.go:28		0x494e64		0f860c010000		JBE 0x494f76				
+  bench.go:28		0x494e6a		55			PUSHQ BP				
+  bench.go:28		0x494e6b		4889e5			MOVQ SP, BP				
+  bench.go:28		0x494e6e		4883ec18		SUBQ $0x18, SP				
+  bench.go:31		0x494e72		4889442428		MOVQ AX, 0x28(SP)			
+  bench.go:29		0x494e77		4889c3			MOVQ AX, BX				
+  bench.go:29		0x494e7a		4889d9			MOVQ BX, CX				
+  bench.go:29		0x494e7d		488d051caa0000		LEAQ 0xaa1c(IP), AX			
+  bench.go:29		0x494e84		e8973ffdff		CALL runtime.makeslice(SB)		
+  bench.go:31		0x494e89		488b542428		MOVQ 0x28(SP), DX			
+  bench.go:31		0x494e8e		31c9			XORL CX, CX				
+  bench.go:31		0x494e90		31db			XORL BX, BX				
+  bench.go:31		0x494e92		eb4c			JMP 0x494ee0				
+  bench.go:32		0x494e94		4869f1ef1e0000		IMULQ $0x1eef, CX, SI			
+  bench.go:32		0x494e9b		488d7e0d		LEAQ 0xd(SI), DI			
+  bench.go:29		0x494e9f		4989c0			MOVQ AX, R8				
+  bench.go:32		0x494ea2		48b89eefa7c64b378941	MOVQ $0x4189374bc6a7ef9e, AX		
+  bench.go:31		0x494eac		4989d1			MOVQ DX, R9				
+  bench.go:32		0x494eaf		48f7ef			IMULQ DI				
+  bench.go:32		0x494eb2		48c1fa08		SARQ $0x8, DX				
+  bench.go:32		0x494eb6		48c1ff3f		SARQ $0x3f, DI				
+  bench.go:32		0x494eba		4829fa			SUBQ DI, DX				
+  bench.go:32		0x494ebd		4869fae8030000		IMULQ $0x3e8, DX, DI			
+  bench.go:32		0x494ec4		4829fe			SUBQ DI, SI				
+  bench.go:32		0x494ec7		488d7e0e		LEAQ 0xe(SI), DI			
+  bench.go:32		0x494ecb		49893cc8		MOVQ DI, 0(R8)(CX*8)			
+  bench.go:31		0x494ecf		48ffc1			INCQ CX					
+  bench.go:33		0x494ed2		488d1c1e		LEAQ 0(SI)(BX*1), BX			
+  bench.go:33		0x494ed6		488d5b0e		LEAQ 0xe(BX), BX			
+  bench.go:32		0x494eda		4c89c0			MOVQ R8, AX				
+  bench.go:31		0x494edd		4c89ca			MOVQ R9, DX				
+  bench.go:31		0x494ee0		4839ca			CMPQ DX, CX				
+  bench.go:31		0x494ee3		7faf			JG 0x494e94				
+  bench.go:35		0x494ee5		4889de			MOVQ BX, SI				
+  bench.go:35		0x494ee8		48c1eb3f		SHRQ $0x3f, BX				
+  bench.go:35		0x494eec		4801f3			ADDQ SI, BX				
+  bench.go:35		0x494eef		48d1fb			SARQ $0x1, BX				
+  bench.go:35		0x494ef2		31c9			XORL CX, CX				
+  bench.go:35		0x494ef4		31f6			XORL SI, SI				
+  bench.go:37		0x494ef6		eb11			JMP 0x494f09				
+  bench.go:45		0x494ef8		4c8d4601		LEAQ 0x1(SI), R8			
+  bench.go:37		0x494efc		48ffc7			INCQ DI					
+  bench.go:44		0x494eff		4939d9			CMPQ R9, BX				
+  bench.go:45		0x494f02		490f44f0		CMOVE R8, SI				
+  bench.go:37		0x494f06		4889f9			MOVQ DI, CX				
+  bench.go:37		0x494f09		4885d2			TESTQ DX, DX				
+  bench.go:37		0x494f0c		7c62			JL 0x494f70				
+  bench.go:37		0x494f0e		4889cf			MOVQ CX, DI				
+  bench.go:37		0x494f11		4889d1			MOVQ DX, CX				
+  bench.go:37		0x494f14		41b801000000		MOVL $0x1, R8				
+  bench.go:37		0x494f1a		49d3e0			SHLQ CL, R8				
+  bench.go:37		0x494f1d		4883f940		CMPQ CX, $0x40				
+  bench.go:37		0x494f21		4d19c9			SBBQ R9, R9				
+  bench.go:37		0x494f24		4d21c8			ANDQ R9, R8				
+  bench.go:37		0x494f27		4c39c7			CMPQ DI, R8				
+  bench.go:37		0x494f2a		7d08			JGE 0x494f34				
+  bench.go:37		0x494f2c		4531c0			XORL R8, R8				
+  bench.go:37		0x494f2f		4531c9			XORL R9, R9				
+  bench.go:39		0x494f32		eb12			JMP 0x494f46				
+  bench.go:48		0x494f34		4889f0			MOVQ SI, AX				
+  bench.go:48		0x494f37		4883c418		ADDQ $0x18, SP				
+  bench.go:48		0x494f3b		5d			POPQ BP					
+  bench.go:48		0x494f3c		c3			RET					
+  bench.go:39		0x494f3d		49ffc0			INCQ R8					
+  bench.go:39		0x494f40		4889d1			MOVQ DX, CX				
+  bench.go:40		0x494f43		4c89df			MOVQ R11, DI				
+  bench.go:39		0x494f46		4c39c1			CMPQ CX, R8				
+  bench.go:39		0x494f49		7ead			JLE 0x494ef8				
+  bench.go:40		0x494f4b		4983f840		CMPQ R8, $0x40				
+  bench.go:40		0x494f4f		4d19d2			SBBQ R10, R10				
+  bench.go:40		0x494f52		49f7d2			NOTQ R10				
+  bench.go:40		0x494f55		4d09c2			ORQ R8, R10				
+  bench.go:40		0x494f58		4c89d1			MOVQ R10, CX				
+  bench.go:40		0x494f5b		4989fb			MOVQ DI, R11				
+  bench.go:40		0x494f5e		48d3ff			SARQ CL, DI				
+  bench.go:40		0x494f61		0fbae700		BTL $0x0, DI				
+  bench.go:40		0x494f65		73d6			JAE 0x494f3d				
+  bench.go:41		0x494f67		4a8b3cc0		MOVQ 0(AX)(R8*8), DI			
+  bench.go:41		0x494f6b		4901f9			ADDQ DI, R9				
+  bench.go:41		0x494f6e		ebcd			JMP 0x494f3d				
+  bench.go:37		0x494f70		e80bfdf9ff		CALL runtime.panicshift(SB)		
+  bench.go:37		0x494f75		90			NOPL					
+  bench.go:28		0x494f76		4889442408		MOVQ AX, 0x8(SP)			
+  bench.go:28		0x494f7b		0f1f440000		NOPL 0(AX)(AX*1)			
+  bench.go:28		0x494f80		e87b6ffdff		CALL runtime.morestack_noctxt.abi0(SB)	
+  bench.go:28		0x494f85		488b442408		MOVQ 0x8(SP), AX			
+  bench.go:28		0x494f8a		e9d1feffff		JMP main.bit(SB)			

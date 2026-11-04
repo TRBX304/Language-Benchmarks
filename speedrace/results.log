@@ -47,3 +47,11 @@ numpy(BLAS) mat 1750 result=57421875000 time=0.171s
 julia(BLAS A*B) mat 1750 result=57421875000 time=0.177s
 === 参考: C を列優先の並びにした場合 ===
 c(列優先) mat 1750 result=57421875000 time=8.248s
+=== 追加実験(2026-11-04) ===
+julia(@inbounds) bit 28 result=367944 time=25.283s
+julia(--check-bounds=no) bit 28 result=367944 time=25.566s
+julia(シフト量を i & 63 に制限) bit 28 result=367944 time=22.686s
+go(GOAMD64=v3) sieve 600 result=398747400 time=31.844s
+go(GOAMD64=v3) bit 28 result=367944 time=28.804s
+go(GOAMD64=v3) eq 3000 result=480 time=30.848s
+go(GOAMD64=v3) mat 1750 result=57421875000 time=32.641s
